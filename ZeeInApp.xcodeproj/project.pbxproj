@@ -196,8 +196,8 @@
 				838D04B81AD26767007CC3EC /* spark.png */,
 				8B2853981B022F2E008946FD /* 水泡2.png */,
 				8B2853A21B031284008946FD /* 水泡7.png */,
-				83C5FDB51AF31C05000A398D /* huaban.png */,
 				83DCB2651ACFAA7E00CE06B8 /* Images.xcassets */,
+				83C5FDB51AF31C05000A398D /* huaban.png */,
 				83DCB2671ACFAA7E00CE06B8 /* LaunchScreen.xib */,
 				83DCB25B1ACFAA7E00CE06B8 /* Info.plist */,
 			);
