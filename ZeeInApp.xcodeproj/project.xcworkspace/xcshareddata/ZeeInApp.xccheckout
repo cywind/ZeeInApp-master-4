@@ -12,20 +12,24 @@
 	<dict>
 		<key>47733A06840268083BA06A6722DD3D0D09962DE2</key>
 		<string>https://github.com/buptjz/ZeeInApp.git</string>
+		<key>85C1D357D573C1E3544E85A149B7E3AE5719DD2B</key>
+		<string>https://github.com/cywind/ZeeInApp-master-4.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ZeeInApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>47733A06840268083BA06A6722DD3D0D09962DE2</key>
+		<string>../../../ZeeInApp</string>
+		<key>85C1D357D573C1E3544E85A149B7E3AE5719DD2B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/buptjz/ZeeInApp.git</string>
+	<string>https://github.com/cywind/ZeeInApp-master-4.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>47733A06840268083BA06A6722DD3D0D09962DE2</string>
+	<string>85C1D357D573C1E3544E85A149B7E3AE5719DD2B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>47733A06840268083BA06A6722DD3D0D09962DE2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ZeeInApp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>85C1D357D573C1E3544E85A149B7E3AE5719DD2B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZeeInApp-master-4</string>
 		</dict>
 	</array>
 </dict>
