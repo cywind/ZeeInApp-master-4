@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DFE7109F-A80F-4BD9-B3A1-9F6A4D36B253</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ZeeInApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>85C1D357D573C1E3544E85A149B7E3AE5719DD2B</key>
 		<string>https://github.com/cywind/ZeeInApp-master-4.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ZeeInApp.xcodeproj/project.xcworkspace</string>
+	<string>ZeeInApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>85C1D357D573C1E3544E85A149B7E3AE5719DD2B</key>

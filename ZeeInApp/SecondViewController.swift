@@ -24,8 +24,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         return 2    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         let row = indexPath.row
         cell.textLabel?.text = swiftBlogs[row]
         
