@@ -34,12 +34,11 @@
 		83DCB2801ACFAE6600CE06B8 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB27E1ACFAE6600CE06B8 /* BTDiscovery.swift */; };
 		83DCB2811ACFAE6600CE06B8 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB27F1ACFAE6600CE06B8 /* BTService.swift */; };
 		8B2853971AFF98E2008946FD /* shuizhong.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B2853961AFF98E2008946FD /* shuizhong.sks */; };
-		8B2853991B022F2E008946FD /* 水泡2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2853981B022F2E008946FD /* 水泡2.png */; };
-		8B2853A31B031284008946FD /* 水泡7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2853A21B031284008946FD /* 水泡7.png */; };
 		8B2853A71B0360DD008946FD /* 水泡8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2853A61B0360DD008946FD /* 水泡8.png */; };
 		8B2853AB1B05C4AE008946FD /* objectivedC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2853AA1B05C4AE008946FD /* objectivedC.m */; };
 		8B2853AF1B083F0D008946FD /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2853AE1B083F0D008946FD /* FourthViewController.swift */; };
 		8B2853B11B08E998008946FD /* personalSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2853B01B08E998008946FD /* personalSet.swift */; };
+		8B2853B91B0E081C008946FD /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2853B81B0E081C008946FD /* RecordTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,14 +83,13 @@
 		83DCB27E1ACFAE6600CE06B8 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
 		83DCB27F1ACFAE6600CE06B8 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
 		8B2853961AFF98E2008946FD /* shuizhong.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = shuizhong.sks; sourceTree = "<group>"; };
-		8B2853981B022F2E008946FD /* 水泡2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水泡2.png"; sourceTree = "<group>"; };
-		8B2853A21B031284008946FD /* 水泡7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水泡7.png"; sourceTree = "<group>"; };
 		8B2853A61B0360DD008946FD /* 水泡8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水泡8.png"; sourceTree = "<group>"; };
 		8B2853A81B05C4AE008946FD /* ZeeInApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZeeInApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		8B2853A91B05C4AE008946FD /* objectivedC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectivedC.h; sourceTree = "<group>"; };
 		8B2853AA1B05C4AE008946FD /* objectivedC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = objectivedC.m; sourceTree = "<group>"; };
 		8B2853AE1B083F0D008946FD /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		8B2853B01B08E998008946FD /* personalSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personalSet.swift; sourceTree = "<group>"; };
+		8B2853B81B0E081C008946FD /* RecordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +173,7 @@
 				83DCB2601ACFAA7E00CE06B8 /* SecondViewController.swift */,
 				838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */,
 				83DCB2621ACFAA7E00CE06B8 /* Main.storyboard */,
+				8B2853B81B0E081C008946FD /* RecordTableViewController.swift */,
 				8B2853AE1B083F0D008946FD /* FourthViewController.swift */,
 				8B2853B01B08E998008946FD /* personalSet.swift */,
 				8B2853A91B05C4AE008946FD /* objectivedC.h */,
@@ -194,8 +193,6 @@
 				83296B5B1AD3CCAC00B34D01 /* BlahParticle.sks */,
 				83296B5C1AD3CCAC00B34D01 /* bokeh.png */,
 				838D04B81AD26767007CC3EC /* spark.png */,
-				8B2853981B022F2E008946FD /* 水泡2.png */,
-				8B2853A21B031284008946FD /* 水泡7.png */,
 				83C5FDB51AF31C05000A398D /* huaban.png */,
 				83DCB2651ACFAA7E00CE06B8 /* Images.xcassets */,
 				83DCB2671ACFAA7E00CE06B8 /* LaunchScreen.xib */,
@@ -308,11 +305,9 @@
 				838D04BA1AD26767007CC3EC /* spark.png in Resources */,
 				83DCB2641ACFAA7E00CE06B8 /* Main.storyboard in Resources */,
 				83C5FDB91AF31C05000A398D /* senlin.sks in Resources */,
-				8B2853A31B031284008946FD /* 水泡7.png in Resources */,
 				83C5FDBB1AF31C05000A398D /* shangu.sks in Resources */,
 				83DCB2691ACFAA7E00CE06B8 /* LaunchScreen.xib in Resources */,
 				83296B5E1AD3CCAC00B34D01 /* bokeh.png in Resources */,
-				8B2853991B022F2E008946FD /* 水泡2.png in Resources */,
 				8B2853971AFF98E2008946FD /* shuizhong.sks in Resources */,
 				83296B5D1AD3CCAC00B34D01 /* BlahParticle.sks in Resources */,
 				83C5FDBC1AF31C05000A398D /* haibian.sks in Resources */,
@@ -336,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2853B91B0E081C008946FD /* RecordTableViewController.swift in Sources */,
 				837C4A6B1AF3376000EC742F /* SenlinScene.swift in Sources */,
 				83DCB2611ACFAA7E00CE06B8 /* SecondViewController.swift in Sources */,
 				833228D11AD036B600941A9A /* DataManager.swift in Sources */,
