@@ -21,7 +21,7 @@ class HaibianScene : SKScene {
     }
     
     /*在这里修改粒子效果*/
-    func updateParticleEmitter(movement : Int, speedScore : Int, steadyScore:Int,posture:Int,status:Int){
+    func updateParticleEmitter(movement : Int, speedScore : Int, steadyScore:Int,posture:Int,status:Int,elapse:Int){
         //movement反映速度的一个量,speedScore速度得分,steadyScore稳定得分,posture姿态,status状态
         println("mvmt:\(movement)")
         emitter.particleSpeed = 50+CGFloat(movement)

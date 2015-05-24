@@ -20,6 +20,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var qingxuSlider: UISlider!
     @IBOutlet weak var jingliSlider: UISlider!
     
+//    var time0 : Int = 0
+//    var time1 : Int = 0
+    
+    var time0 : NSDate = NSDate()
+    var time1 : NSDate = NSDate()
+
     var scenType : String?
     var mysk : SKView?
     
@@ -29,6 +35,16 @@ class GameViewController: UIViewController {
     var kongzhidefenArray : [Int] = [Int]()
     var shishidefenArray : [Int] = [Int]()
     var lastStatus:Int = 0//默认上一次状态为静止
+    
+    func resetTime(var theTime:NSDate){
+        theTime = NSDate()
+    }
+
+    func getTimeElpase(theTime:NSDate)->Int{
+        let current = NSDate()
+        return Int(current.timeIntervalSinceDate(theTime))
+    }
+
     func computeAverageDouble(arr: [Double], num: Int)->Double{
         var accum : Double = 0
         for d in arr{
@@ -95,26 +111,33 @@ class GameViewController: UIViewController {
         updateTimes += 1
         
         transisionSceneStatus(status, posture: posture)
+        
+        let current_elapse_time:Int = self.getTimeElpase(self.time1)
         //update UI should be in main queue
         dispatch_async(dispatch_get_main_queue(), {
             if self.scenType == kSceneTypeShuiZhong{
                 let scene = self.mysk!.scene as! ShuiZhongScene
-                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status,elapse: current_elapse_time)
             }else if self.scenType == kSceneTypeSenlin{
                 let scene = self.mysk!.scene as! SenlinScene
-                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status,elapse: current_elapse_time)
             }else if self.scenType == kSceneTypeShanGu{
                 let scene = self.mysk!.scene as! ShanGuScene
-                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status,elapse: current_elapse_time)
             }else if self.scenType == kSceneTypeHaibian{
                 let scene = self.mysk!.scene as! HaibianScene
-                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status,elapse: current_elapse_time)
             }
 
         });
     }
     
     override func viewWillAppear(animated: Bool) {
+
+        //重置时间
+        self.resetTime(self.time0)
+        self.resetTime(self.time1)
+        
         println("View will Appear")
         if scenType == kSceneTypeShuiZhong{
             self.mysk!.presentScene(ShuiZhongScene(size: self.view.frame.size))
@@ -138,6 +161,9 @@ class GameViewController: UIViewController {
 //    
     func transisionSceneStatus(status: Int, posture: Int){
         if(status != lastStatus ){
+            //重置时间1
+            self.resetTime(self.time1)
+
             if(status == 0){
                 switch posture{
                 case 1:
@@ -184,6 +210,12 @@ class GameViewController: UIViewController {
     }
     
     func buttonClick(sender: AnyObject){
+        
+        //记录一下当前总时间，怎么用？
+        let zongshijian = self.getTimeElpase(self.time0)
+        print("总时间：\(zongshijian)")
+        
+        
         //fix sprite bugs
         /*Release SKView Things*/
         mysk!.paused = true
