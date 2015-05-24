@@ -164,13 +164,14 @@ class GameViewController: UIViewController {
     func transisionSceneStatus(status: Int, posture: Int){
         if(status != lastStatus ){
             //重置时间1
-            self.resetTime(self.time1)
-
+//            self.resetTime(self.time1)
+            self.time1 = NSDate()
             if(status == 0){
                 switch posture{
                
                 case 1:
                     dispatch_async(dispatch_get_main_queue(), {
+                        println("切换到场景1")
                         let fade = SKTransition.fadeWithDuration(1.5)
                         let reavea = SKTransition.crossFadeWithDuration(1.5)
                         self.mysk!.presentScene(SenlinScene(size: self.view.frame.size), transition: fade)
@@ -180,6 +181,7 @@ class GameViewController: UIViewController {
                 
                 case 2:
                     dispatch_async(dispatch_get_main_queue(), {
+                        println("切换到场景2")
                         let fade = SKTransition.fadeWithDuration(1.5)
                         let reavea = SKTransition.crossFadeWithDuration(1.5)
                         self.mysk!.presentScene(ShanGuScene(size: self.view.frame.size), transition: fade)
@@ -187,6 +189,7 @@ class GameViewController: UIViewController {
                     })
                 case 3:
                     dispatch_async(dispatch_get_main_queue(), {
+                        println("切换到场景3")
                         let fade = SKTransition.fadeWithDuration(1.5)
                         let reavea = SKTransition.crossFadeWithDuration(1.5)
                         self.mysk!.presentScene(HaibianScene(size: self.view.frame.size), transition: fade)
