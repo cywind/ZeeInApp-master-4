@@ -63,7 +63,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="979" height="410"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2462C9E6-0DAE-4169-A285-82462A5F5435" id="GUC-3A-5lY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="43191E49-08D7-4249-BAA2-343AF064AE26" id="GUC-3A-5lY">
                                                     <rect key="frame" x="14" y="8" width="950" height="411"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -77,7 +77,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="979" height="410"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2462C9E6-0DAE-4169-A285-82462A5F5435" id="pFm-LE-FaB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="43191E49-08D7-4249-BAA2-343AF064AE26" id="pFm-LE-FaB">
                                                     <rect key="frame" x="14" y="8" width="950" height="411"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -187,6 +187,13 @@
                                 <color key="minimumTrackTintColor" red="0.98823535442352295" green="0.69019609689712524" blue="0.16862745583057404" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="maximumTrackTintColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Vb-Z5-sQh">
+                                <rect key="frame" x="766" y="136" width="184" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -195,6 +202,7 @@
                         <outlet property="kongzhidefenLabel" destination="ep4-sW-f3Y" id="Gtx-ot-w97"/>
                         <outlet property="pinghengdefenLabel" destination="Piw-Jt-TmN" id="VM3-7p-kBU"/>
                         <outlet property="qingxuSlider" destination="eKO-db-cFR" id="4wk-yH-Zmu"/>
+                        <outlet property="wanchengshijianLabel" destination="3Vb-Z5-sQh" id="PCX-I4-Ykb"/>
                         <outlet property="zhuangzhuSlider" destination="EQ6-2M-MwX" id="RLc-kX-Q10"/>
                         <outlet property="zongfenLabel" destination="t5b-J4-8c4" id="ye7-Yv-Qp3"/>
                     </connections>
@@ -399,7 +407,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2462C9E6-0DAE-4169-A285-82462A5F5435" width="915" height="479">
+        <image name="43191E49-08D7-4249-BAA2-343AF064AE26" width="915" height="479">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

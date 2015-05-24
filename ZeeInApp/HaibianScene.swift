@@ -29,6 +29,8 @@ class HaibianScene : SKScene {
         emitter.particleLifetime = 10-CGFloat(movement)/20.0
        /* emitter.emissionAngleRange = CGFloat(100-steadyScore)*1.0/100.0*/
         emitter.xAcceleration = CGFloat(100-steadyScore)/10.0
+        emitter.particleBirthRate = 10-CGFloat(elapse)/3
+
     }
     
     func createContent() {

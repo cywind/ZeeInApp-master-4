@@ -73,17 +73,19 @@ class GameViewController: UIViewController {
         mysk = SKView(frame: self.view.frame)
         self.view.addSubview(mysk!)
         mysk!.showsNodeCount = true
-        let button = UIButton(frame:CGRect(origin: CGPointMake(800, 600), size:CGSizeMake(300,150)))
-        button.setTitle("退出", forState:UIControlState.Normal)
+        let button = UIButton(frame:CGRect(origin: CGPointMake(800, 600), size:CGSizeMake(150,100)))
+       // button.setTitle("退出", forState:UIControlState.Normal)
+        let img:UIImage!=UIImage(named:"button_finish.png")
+        button.setImage(img, forState:  UIControlState.Normal)
         button.addTarget(self, action:"buttonClick:", forControlEvents: UIControlEvents.TouchUpInside)
         mysk!.addSubview(button)
         
-        //切换按钮
-        let trans_button = UIButton(frame:CGRect(origin: CGPointMake(50, 600), size:CGSizeMake(300,150)))
-        trans_button.setTitle("切换", forState:UIControlState.Normal)
-        trans_button.addTarget(self, action:"transitionSceneButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
-        mysk!.addSubview(trans_button)
-        
+//        //切换按钮
+//        let trans_button = UIButton(frame:CGRect(origin: CGPointMake(50, 600), size:CGSizeMake(300,150)))
+//        trans_button.setTitle("切换", forState:UIControlState.Normal)
+//        trans_button.addTarget(self, action:"transitionSceneButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+//        mysk!.addSubview(trans_button)
+//        
         // Watch Bluetooth connection
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedValue:"), name: BLEServiceReceiveNotification, object: nil)
         
@@ -166,26 +168,29 @@ class GameViewController: UIViewController {
 
             if(status == 0){
                 switch posture{
+               
                 case 1:
-                    dispatch_async(dispatch_get_main_queue(), {
-                        let fade = SKTransition.fadeWithDuration(1.5)
-                        let reavea = SKTransition.crossFadeWithDuration(1.5)
-                        self.mysk!.presentScene(HaibianScene(size: self.view.frame.size), transition: fade)
-                        self.scenType = kSceneTypeHaibian
-                })
-                case 3:
                     dispatch_async(dispatch_get_main_queue(), {
                         let fade = SKTransition.fadeWithDuration(1.5)
                         let reavea = SKTransition.crossFadeWithDuration(1.5)
                         self.mysk!.presentScene(SenlinScene(size: self.view.frame.size), transition: fade)
                         self.scenType = kSceneTypeSenlin
                     })
-                case 4:
+              
+                
+                case 2:
                     dispatch_async(dispatch_get_main_queue(), {
                         let fade = SKTransition.fadeWithDuration(1.5)
                         let reavea = SKTransition.crossFadeWithDuration(1.5)
                         self.mysk!.presentScene(ShanGuScene(size: self.view.frame.size), transition: fade)
                         self.scenType = kSceneTypeShanGu
+                    })
+                case 3:
+                    dispatch_async(dispatch_get_main_queue(), {
+                        let fade = SKTransition.fadeWithDuration(1.5)
+                        let reavea = SKTransition.crossFadeWithDuration(1.5)
+                        self.mysk!.presentScene(HaibianScene(size: self.view.frame.size), transition: fade)
+                        self.scenType = kSceneTypeHaibian
                     })
                 default:
                     println("default")
@@ -198,7 +203,7 @@ class GameViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue(), {
                 let fade = SKTransition.fadeWithDuration(1.5)
                 let reavea = SKTransition.crossFadeWithDuration(1.5)
-                self.mysk!.presentScene(ShuiZhongScene(size: self.view.frame.size), transition: fade)
+                self.mysk!.presentScene(ShuiZhongScene(size: self.view.frame.size), transition: reavea)
                 self.scenType = kSceneTypeShuiZhong
 
             })
@@ -214,8 +219,7 @@ class GameViewController: UIViewController {
         //记录一下当前总时间，怎么用？
         let zongshijian = self.getTimeElpase(self.time0)
         print("总时间：\(zongshijian)")
-        
-        
+        self.wanchengshijianLabel.text = "练习时间：\(zongshijian)s"
         //fix sprite bugs
         /*Release SKView Things*/
         mysk!.paused = true
@@ -237,6 +241,7 @@ class GameViewController: UIViewController {
         
         let zongfen = computeAverageInt(shishidefenArray, num: updateTimes)
         self.zongfenLabel.text = "\(zongfen)"
+        
     }
     
     @IBAction func finishBtnPress(sender: AnyObject) {

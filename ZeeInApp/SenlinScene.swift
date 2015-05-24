@@ -24,8 +24,10 @@ class SenlinScene : SKScene {
     func updateParticleEmitter(movement : Int, speedScore : Int, steadyScore:Int,posture:Int,status:Int,elapse:Int){
         //movement反映速度的一个量,speedScore速度得分,steadyScore稳定得分,posture姿态,status状态
         println("mvmt:\(movement)")
+        println("elapse:\(elapse)")
         emitter.particleSpeed = CGFloat(movement)*1.5
-        emitter.particleBirthRate = 100+CGFloat(movement)*0.2
+        emitter.particleBirthRate = 100-CGFloat(elapse)*2
+            //100+CGFloat(movement)*0.2
         emitter.particleAlphaSpeed = -0.35+CGFloat(100-steadyScore)*0.002
        /* emitter.emissionAngleRange = CGFloat(100-steadyScore)*0.9*/
     }

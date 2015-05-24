@@ -25,7 +25,8 @@ class ShanGuScene : SKScene {
         //movement反映速度的一个量,speedScore速度得分,steadyScore稳定得分,posture姿态,status状态
         println("mvmt:\(movement)")
         emitter.particleSpeed = 85+CGFloat(movement)
-        emitter.particleBirthRate = 20+CGFloat(movement)*0.40
+        emitter.particleBirthRate = 40-CGFloat(elapse)
+            //20+CGFloat(movement)*0.40
         emitter.emissionAngleRange = CGFloat(100-steadyScore)*1.0/100.0
         
     }
